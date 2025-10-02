@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Validaciones</title>
+</head>
+<body>
+    <h1>Formulario de Registro con Validación</h1>
+    
+    <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="registro.html">Boletín</a> |
+        <a href="lenguajes.html">Preferencias</a> |
+        <a href="validacion.html">Validación</a> |
+        <a href="cursos.html">Cursos</a>
+    </nav>
+
+    <hr>
+
+    <form action="/registrar" method="post">
+        <fieldset>
+            <legend>Registro de Usuario (Validaciones HTML5)</legend>
+            
+            <div>
+                <label for="correo_usuario">Correo Electrónico:</label>
+                <input type="email" id="correo_usuario" name="correo_usuario" 
+                       placeholder="ejemplo@dominio.com" required>
+            </div>
+            
+            <div>
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" 
+                       placeholder="Mínimo 6 y Máximo 12 caracteres"
+                       required
+                       pattern=".{6,12}" 
+                       title="La contraseña debe tener entre 6 y 12 caracteres.">
+            </div>
+            
+            <div>
+                <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" 
+                       placeholder="Repite la contraseña"
+                       required>
+            </div>
+            
+            <div>
+                <button type="submit">Registrarse</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
