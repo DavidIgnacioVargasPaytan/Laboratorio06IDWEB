@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín de Noticias</title>
+</head>
+<body>
+    <h1>Suscripción al Boletín de Noticias</h1>
+    
+    <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="registro.html">Boletín</a> |
+        <a href="lenguajes.html">Preferencias</a> |
+        <a href="validacion.html">Validación</a> |
+        <a href="cursos.html">Cursos</a>
+    </nav>
+
+    <hr>
+
+    <form action="/subscribe" method="post">
+        <fieldset>
+            <legend>Regístrate para recibir nuestro Boletín</legend>
+            <div>
+                <label for="nombre_completo">Nombre Completo:</label>
+                <input type="text" id="nombre_completo" name="nombre_completo" required>
+            </div>
+            
+            <div>
+                <label for="correo_boletin">Correo Electrónico:</label>
+                <input type="email" id="correo_boletin" name="correo_boletin" required>
+            </div>
+
+            <div>
+                <input type="checkbox" id="acepto_boletin" name="acepto_boletin" required>
+                <label for="acepto_boletin">Acepto recibir el boletín de noticias.</label>
+            </div>
+            
+            <div>
+                <button type="submit">Suscribirse</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
