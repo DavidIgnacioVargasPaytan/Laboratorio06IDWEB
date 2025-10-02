@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferencias de Lenguajes</title>
+</head>
+<body>
+    <h1>Preferencias de Lenguajes de Programación</h1>
+    
+    <nav>
+        <a href="index.html">Inicio</a> |
+        <a href="registro.html">Boletín</a> |
+        <a href="lenguajes.html">Preferencias</a> |
+        <a href="validacion.html">Validación</a> |
+        <a href="cursos.html">Cursos</a>
+    </nav>
+
+    <hr>
+
+    <form action="/guardar-preferencias" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Tus Preferencias</legend>
+
+            <div>
+                <label for="foto_perfil">Foto de Perfil:</label>
+                <input type="file" id="foto_perfil" name="foto_perfil" accept="image/*">
+            </div>
+
+            <div>
+                <label for="experiencia">Años de Experiencia:</label>
+                <input type="number" id="experiencia" name="experiencia" min="0" placeholder="Ej: 2" required>
+            </div>
+
+            <div role="group">
+                <h3>Lenguajes que conoces: (Selecciona uno o varios)</h3>
+                <input type="checkbox" id="html_css" name="lenguaje" value="HTML/CSS">
+                <label for="html_css">HTML/CSS</label><br>
+
+                <input type="checkbox" id="javascript" name="lenguaje" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+                
+                <input type="checkbox" id="python" name="lenguaje" value="Python">
+                <label for="python">Python</label><br>
+            </div>
+
+            <div>
+                <button type="submit">Guardar Preferencias</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
